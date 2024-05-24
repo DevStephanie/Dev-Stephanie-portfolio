@@ -7,21 +7,28 @@ import BorderColorIcon from "@material-ui/icons/BorderColor";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import "../styles/NavBar.css";
+import { Link } from "react-router-dom";
+
+// Custom wrapper component for Nav.Link to use React Router's Link
+const NavLink = (props) => (
+  <Nav.Link as={Link} {...props} />
+);
 
 class NavBar extends React.Component {
+  
   render() {
     return (
       <Navbar fixed="top" className="navbar-new">
         <Container>
-          <Navbar.Brand href="#">DevStephanie</Navbar.Brand>
+          <Navbar.Brand  href="/">DevStephanie</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#intro"> HOME </Nav.Link>
-              <Nav.Link href="#about"> ABOUT </Nav.Link>
-              <Nav.Link href="#experience"> EXP </Nav.Link>
-              <Nav.Link href="#projects"> PROJ </Nav.Link>
-              <Nav.Link href="#artdump"> ART </Nav.Link>
+              <Nav.Link href="/#intro"> HOME </Nav.Link>
+              <Nav.Link href="/#about"> ABOUT </Nav.Link>
+              <Nav.Link href="/#experience"> EXP </Nav.Link>
+              <Nav.Link href="/#projects"> PROJ </Nav.Link>
+              <NavLink to="/art"> ART </NavLink>
 
             </Nav>
             <Nav className="ml-auto">

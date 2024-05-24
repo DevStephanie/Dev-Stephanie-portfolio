@@ -1,5 +1,5 @@
-import React from "react";
-import "../styles/Projects.css";
+ import React from "react";
+import "../styles/ArtDump.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Carousel from "react-bootstrap/Carousel";
 
@@ -85,6 +85,17 @@ class ArtDump extends React.Component {
             </Carousel.Item>
           ))}
         </Carousel>
+        <div className="photo-gallery">
+        {Object.keys(spotlightProjects).map((key, i) => (
+          <div>
+             <img
+                className=""
+                src={spotlightProjects[key]["image"]}
+                alt={key}
+              />
+          </div>
+        ))}
+        </div>
       </div>
     );
   }
