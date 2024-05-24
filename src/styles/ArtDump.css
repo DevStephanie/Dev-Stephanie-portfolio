@@ -10,6 +10,14 @@
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-gap: 10px;
   }
+  .photo-gallery{
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   
+  }
   
   @media (max-width: 1080px) {
     .projects-grid {
